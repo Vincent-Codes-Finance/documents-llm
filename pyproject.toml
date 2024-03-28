@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "documents-llm"
+version = "0.1.0"
+description = "Scripts to analyse documents using LLMs"
+authors = ["Vincent Grégoire <vincent@codes.finance>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.14.3"
+langchain = "^0.1.13"
+ollama = "^0.1.8"
+rich = "^13.7.1"
+python-dotenv = "^1.0.1"
+langchain-openai = "^0.1.1"
+pypdf = "^4.1.0"
+tiktoken = "^0.6.0"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
