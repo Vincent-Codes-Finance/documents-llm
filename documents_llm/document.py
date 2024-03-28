@@ -3,7 +3,6 @@ from pathlib import Path
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_community.document_loaders.text import TextLoader
 from langchain_core.documents.base import Document
-from langchain_text_splitters import CharacterTextSplitter
 
 
 def load_pdf(
@@ -21,12 +20,3 @@ def load_pdf(
 def load_text(file_path: Path | str) -> list[Document]:
     loader = TextLoader(str(file_path))
     return loader.load()
-
-
-def split_documents(
-    docs: list[Document], chunk_size: int, chunk_overlap: int
-) -> list[Document]:
-    text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
-        chunk_size=1000, chunk_overlap=0
-    )
-    return text_splitter.split_documents(docs)
