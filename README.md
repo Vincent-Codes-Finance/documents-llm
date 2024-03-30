@@ -4,6 +4,13 @@ Sample cripts to summarize and query documents using LLMs.
 
 THIS IS NOT ROBUST OR PRODUCTION-READY! FOR DEMONSTRATION PURPOSES ONLY!
 
+## References
+
+This is the sample code for the following video and blog post:
+
+- [Summarize and Query PDFs with a Private Local GPT for Free using Ollama and Langchain (YouTube)](https://youtu.be/Tnu_ykn1HmI)
+- [Summarize and Query PDFs with AI using Ollama](https://vincent.codes.finance/posts/documents-llm/)
+
 ## Setup
 
 ### Dependencies
@@ -27,13 +34,18 @@ Using poetry, that would be:
 poetry install
 ```
 
-
 and setup your environment variables. The recommended way is to use a `.env` file. Just copy
 and rename one of `.env-ollama-sample` or `.env-openai-sample` to `.env`. If you use
 OpenAI, you will need to also set your API key in `.env`
 
 
-## Usage
+## Streamlit App Usage
+
+```bash
+streamlit run doc_app.py
+```
+
+## CLI Usage
 
 There are two scripts, one for summarizing and one for querying documents.
 

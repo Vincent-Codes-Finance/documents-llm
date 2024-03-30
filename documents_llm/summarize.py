@@ -30,7 +30,6 @@ def summarize_document(
     "{document}"
     Summary:"""
     prompt = PromptTemplate.from_template(prompt_template)
-    prompt = prompt.partial()
 
     llm_chain = LLMChain(llm=llm, prompt=prompt)
 
